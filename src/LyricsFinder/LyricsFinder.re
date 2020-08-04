@@ -8,9 +8,9 @@ type lyrics =
 
 [@react.component]
 let make = () => {
-    let (lyrics, setLyrics) = React.useState(() => NotLoadedLyrics);
-    let(artistName, setArtistName) = React.useState(() => "");
-    let(songName, setSongName) = React.useState(() => "");
+  let (lyrics, setLyrics) = React.useState(() => NotLoadedLyrics);
+  let(artistName, setArtistName) = React.useState(() => "");
+  let(songName, setSongName) = React.useState(() => "");
 
 
   let onSubmit = (e: ReactEvent.Form.t): unit => {
@@ -26,11 +26,11 @@ let make = () => {
           }
           Js.Promise.resolve();
 
-         })
+      })
       |> catch(_err => {
           setLyrics(_previousState => ErrorFetchingLyrics);
            Js.Promise.resolve();
-         })
+      })
       |> ignore
     );
   };
