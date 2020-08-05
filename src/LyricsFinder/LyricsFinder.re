@@ -58,8 +58,8 @@ let make = () => {
     ->Belt.Array.map((lyricLine) => {
       <div><label>{React.string(lyricLine)}</label></div>;
     
-   })
-   ->React.array
+    })
+    ->React.array
   }}
   </div>;
 }
